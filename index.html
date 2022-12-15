@@ -51,9 +51,8 @@
             <section class="hero">
                 <div class="container-hero">
                     <h1 class="hero-title">Ефективні рішення для <br> вашого бізнесу</h1>
-                <button class="hero-list">Замовити послугу</button>
+                <button data-modal-open class="hero-list">Замовити послугу</button>
                 </div>
-                
             </section>
         </div>
         <section class="section">
@@ -109,13 +108,15 @@
                 <ul class="list image-block">
                     <li class="image-title">
                         <img class="" src="./images/img.jpg" alt="робота за ноутбуком" width="370">
-                        <p class="position">Десктопні додатки</p>
+                        <p class="work">Десктопні додатки</p>
                     </li>
                     <li class="image-title">
                         <img class="" src="./images/img(1).jpg" alt="ноутбук на столі" width="370">
+                        <p class="work">Мобільні додатки</p>
                     </li>
                     <li class="image-title">
-                        <img class="work" src="./images/img(2).jpg" alt="планшет в руках" width="370">
+                        <img class="" src="./images/img(2).jpg" alt="планшет в руках" width="370">
+                        <p class="work">Дизайнерські рішення</p>
                     </li>
                     <li class="image-block">
                        
@@ -351,11 +352,21 @@
                         </svg></a>
                     </li>
                 </ul>
-                
-                
             </div>
         </div>
-        
     </footer>
+    <script>
+        const { height: headerHeight} = document
+        .querySelector(".header")
+        .getBoundingClientRect( );
+
+        document.body.style.paddingTop = '${headerHeight}px'
+    </script>
+    <script src="./js/modal.js"></script>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button data-modal-close type="button" class="modal-button">закрыть</button>
+        </div>
+    </div>
 </body>
 </html>
