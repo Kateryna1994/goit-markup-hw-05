@@ -19,9 +19,9 @@
             </a>
                 <nav>
                     <ul class="site-nav list">
-                        <li class="site-item"> <a href="./portfolio.html" class="link">Студія</a></li>
-                        <li class="site-item"> <a href="./portfolio.html" class="link">Портфоліо</a></li>
-                        <li class="site-item"> <a href="./portfolio.html" class="link">Контакти</a></li>
+                        <li class="site-item"> <a href="./portfolio.html" class="link site-title">Студія</a></li>
+                        <li class="site-item"> <a href="./portfolio.html" class="link site-title">Портфоліо</a></li>
+                        <li class="site-item"> <a href="./portfolio.html" class="link site-title">Контакти</a></li>
                     </ul>
                 </nav>
             <ul class="contact list">
@@ -219,10 +219,15 @@
                         </svg></a>
                     </li>
                 </ul>
-                
-                
             </div>
         </div>
     </footer>
+    <script>
+        const { height: HeaderHeight} = document
+        .querySelector(".header")
+        .getBoundingClientRect();
+
+        document.body.style.paddingTop = '${HeaderHeight}px'
+    </script>
 </body>
 </html>

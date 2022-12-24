@@ -132,9 +132,9 @@
                 <h2 class="section-title heading-sitebar">Наша команда</h2>
             </div>
             <div class="side-container">
-                <ul class="sidebar-container list">
+                <ul class="list sidebar-container">
                     <li class="flex-title">
-                        <div class="flex-thumb">
+                        <div class="">
                             <img src="./images/img(0)(1).jpg" alt="продукт дезайнер" width="270">
                         </div>
                         <div class="flex-contant">
@@ -165,7 +165,7 @@
                         </div>
                     </li>
                     <li class="flex-title">
-                        <div class="flex-thumb">
+                        <div class="">
                             <img src="./images/img(1)(1).jpg" alt="фронтенд розробник" width="270">
                         </div>
                         <div class="flex-contant">
@@ -197,7 +197,7 @@
                           
                     </li>
                     <li class="flex-title">
-                        <div class="flex-thumb">
+                        <div class="">
                             <img src="./images/img(2)(1).jpg" alt="маркетинг" width="270">
                         </div>
                         <div class="flex-contant">
@@ -228,7 +228,7 @@
                         </div>
                     </li>
                     <li class="flex-title">
-                        <div class="flex-thumb">
+                        <div class="">
                             <img src="./images/img(3)(1).jpg" alt="юл дизайнер" width="270">
                         </div>
                         <div class="flex-contant">
@@ -311,10 +311,17 @@
                 </ul>
 
             </div>
-            
-
         </section>
     </main>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button data-modal-close type="button" class="modal-button">
+                <svg width="30px" height="27px" class="icon-close">
+                    <use href="./images/symbol-defs2.svg#icon-close-black-18dp"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
     <footer class="footer">
         <div class="container-footer">
             <div>
@@ -355,18 +362,13 @@
             </div>
         </div>
     </footer>
-    <script>
-        const { height: headerHeight} = document
-        .querySelector(".header")
-        .getBoundingClientRect( );
-
-        document.body.style.paddingTop = '${headerHeight}px'
-    </script>
     <script src="./js/modal.js"></script>
-    <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-            <button data-modal-close type="button" class="modal-button">закрыть</button>
-        </div>
-    </div>
+    <script>
+        const { height: HeaderHeight} = document
+        .querySelector(".header")
+        .getBoundingClientRect();
+
+        document.body.style.paddingTop = '${HeaderHeight}px'
+    </script>
 </body>
 </html>
