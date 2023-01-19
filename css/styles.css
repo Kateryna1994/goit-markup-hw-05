@@ -4,7 +4,6 @@
     --accent-text-color:#2196F3;
     --primary-white-color:#FFFFFF;
     --primery-button-color:#212121;
-    --timing-transform:cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 body {
@@ -26,7 +25,6 @@ body {
 }
 .header{
     position: fixed;
-    
     height: 80px;
     width: 100%;
     top: 0;
@@ -266,6 +264,7 @@ img{
     margin-left: 30px;
     margin-top: 30px;
     border: 1px solid #eeeeee;
+    
 }
 .flex-section:nth-child(-n+3){
     margin-top: 0;
@@ -279,22 +278,24 @@ img{
     position: relative;
     overflow: hidden;
 }
-.flex-overlay{
+.flex-overlay{ 
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;    
-    opacity: 0;
     background-color: rgba(33, 150, 243, 0.9);
-    transition: 250ms var(--timing-transform);
-    transform: translateY(101%);
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.flex-overlay:hover{
+.flex-thumb:hover .flex-overlay{
+    transform: translateY(0);
     opacity: 1;
 }
-.flex-section:hover .flex-overlay{
+.flex-thumb:focus .flex-overlay{
     transform: translateY(0);
+    opacity: 1;
 }
 .flex-text{
     position: absolute;
@@ -308,17 +309,6 @@ img{
     letter-spacing: 0.03em;
     text-align: left;
 }
-
-/* .flex-overlay{
-    position: absolute;
-    
-}
-.flex-thumb:hover .flex-overlay{
-    opacity: 1;
- } */
- .flex-section:hover .flex-thumb::before{
-    transform: translateY(0);
- }
 .flex-contants{
     margin: 0;
     padding: 24px;
@@ -449,6 +439,7 @@ img{
 .image-title:first-child{
     margin-left: 0;
 }
+
 .work{
     padding: 27px;
     color: var(--primary-white-color);
@@ -646,6 +637,9 @@ color: var(--accent-text-color);
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    z-index: 2;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
     opacity: 0;
@@ -659,7 +653,6 @@ color: var(--accent-text-color);
     width: 528px;
     height: 581px;
     background-color: var(--primary-white-color);
-    /* transition: transform 500ms cubic-beiser(0.4, 0, 0.2, 1); */
 }
 .modal-button{
     position: absolute;
